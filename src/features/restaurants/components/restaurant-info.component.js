@@ -16,3 +16,5 @@ export const RestaurantInfo = ({ restaurant = {} }) => {
   } = restaurant;
   return <Text>{name}</Text>;
 };
+
+const styles = StyleSheet.create({});
