@@ -8,21 +8,13 @@ import {
   Platform,
   StatusBar,
 } from "react-native";
-import { Searchbar } from "react-native-paper";
 
-const isAndroid = Platform.OS === "android";
+import { RestaurantScreen } from "./src/features/restaurants/screens/restaurants.screen";
 
 export default function App() {
   return (
     <View style={styles.topContainer}>
-      <SafeAreaView style={styles.container}>
-        <View style={styles.search}>
-          <Searchbar />
-        </View>
-        <View style={styles.list}>
-          <Text>List</Text>
-        </View>
-      </SafeAreaView>
+      <RestaurantScreen />
       <ExpoStatusBar style="auto" />
     </View>
   );
@@ -33,18 +25,5 @@ const styles = StyleSheet.create({
   topContainer: {
     flex: 1,
     // backgroundColor: "yellow",
-  },
-  container: {
-    flex: 1,
-    paddingTop: isAndroid ? StatusBar.currentHeight : 0,
-  },
-  search: {
-    padding: 16,
-    // backgroundColor: "green",
-  },
-  list: {
-    flex: 1,
-    padding: 16,
-    backgroundColor: "blue",
   },
 });
