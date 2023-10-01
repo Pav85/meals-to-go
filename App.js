@@ -4,7 +4,7 @@ import React from "react";
 
 export default function App() {
   return (
-    <View>
+    <>
       <SafeAreaView style={{ flex: 1 }}>
         <View style={{ padding: 16, backgroundColor: "green" }}>
           <Text>Search</Text>
@@ -13,7 +13,8 @@ export default function App() {
           <Text>List</Text>
         </View>
       </SafeAreaView>
-    </View>
+      <StatusBar style="auto" />
+    </>
   );
 }
 
