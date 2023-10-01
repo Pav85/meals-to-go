@@ -1,3 +1,4 @@
+import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import {
   SafeAreaView,
   StyleSheet,
@@ -7,6 +8,8 @@ import {
   StatusBar,
 } from "react-native";
 import React from "react";
+
+const isAndroid = Platform.OS === "android";
 
 export default function App() {
   return (
@@ -19,7 +22,7 @@ export default function App() {
           <Text>List</Text>
         </View>
       </SafeAreaView>
-      <StatusBar style="auto" />
+      <ExpoStatusBar style="auto" />
     </View>
   );
 }
@@ -28,6 +31,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    paddingTop: isAndroid ? StatusBar.currentHeight : 0,
   },
 });
