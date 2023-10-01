@@ -8,7 +8,7 @@ import {
   StatusBar,
 } from "react-native";
 import { Searchbar } from "react-native-paper";
-import { RestaurantInfo } from "../components/restaurant-info.component";
+import { RestaurantInfoCard } from "../components/restaurant-info.component";
 
 const isAndroid = Platform.OS === "android";
 
@@ -19,7 +19,7 @@ export const RestaurantScreen = () => {
         <Searchbar />
       </View>
       <View style={styles.list}>
-        <RestaurantInfo />
+        <RestaurantInfoCard />
       </View>
     </SafeAreaView>
   );
