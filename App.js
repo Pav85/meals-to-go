@@ -13,8 +13,8 @@ const isAndroid = Platform.OS === "android";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <SafeAreaView style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: "yellow" }}>
+      <SafeAreaView style={styles.container}>
         <View style={{ padding: 16, backgroundColor: "green" }}>
           <Text>Search</Text>
         </View>
