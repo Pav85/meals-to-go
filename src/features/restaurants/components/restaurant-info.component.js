@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "react-native";
 
-export const RestaurantInfo = ({ restaurant }) => {
+export const RestaurantInfo = ({ restaurant = {} }) => {
   const {
     name = "some restaurant",
     icon,
@@ -10,8 +10,8 @@ export const RestaurantInfo = ({ restaurant }) => {
     ],
     address = "100 random street",
     isOpenNow = true,
-    rating,
+    rating = 4,
     isClosedTemporarily,
   } = restaurant;
-  return <Text>Info</Text>;
+  return <Text>{name}</Text>;
 };
