@@ -13,12 +13,12 @@ const isAndroid = Platform.OS === "android";
 
 export default function App() {
   return (
-    <View style={{ flex: 1, backgroundColor: "yellow" }}>
+    <View style={styles.topContainer}>
       <SafeAreaView style={styles.container}>
-        <View style={{ padding: 16, backgroundColor: "green" }}>
+        <View style={styles.search}>
           <Text>Search</Text>
         </View>
-        <View style={{ flex: 1, padding: 16, backgroundColor: "blue" }}>
+        <View style={styles.list}>
           <Text>List</Text>
         </View>
       </SafeAreaView>
@@ -29,8 +29,21 @@ export default function App() {
 // might have to wrap everything in <></> tag because of the <StatusBar style="auto" /> element
 
 const styles = StyleSheet.create({
+  topContainer: {
+    flex: 1,
+    backgroundColor: "yellow",
+  },
   container: {
     flex: 1,
     paddingTop: isAndroid ? StatusBar.currentHeight : 0,
+  },
+  search: {
+    padding: 16,
+    backgroundColor: "green",
+  },
+  list: {
+    flex: 1,
+    padding: 16,
+    backgroundColor: "blue",
   },
 });
