@@ -16,7 +16,11 @@ export const RestaurantInfo = ({ restaurant = {} }) => {
   } = restaurant;
   return (
     <Card elevation={5} style={styles.card}>
-      <Card.Cover key={name} style={styles.cover}></Card.Cover>
+      <Card.Cover
+        key={name}
+        style={styles.cover}
+        source={{ uri: photos[0] }}
+      ></Card.Cover>
       <Text>{name}</Text>
     </Card>
   );
