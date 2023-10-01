@@ -1,14 +1,6 @@
 import React from "react";
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
-import {
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-  Platform,
-  StatusBar,
-} from "react-native";
-
+import { StyleSheet, View } from "react-native";
 import { RestaurantScreen } from "./src/features/restaurants/screens/restaurants.screen";
 
 export default function App() {
