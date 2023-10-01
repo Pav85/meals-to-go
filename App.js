@@ -8,7 +8,7 @@ import {
   Platform,
   StatusBar,
 } from "react-native";
-import { Searchbar } from "react-native-paper";
+// import { Searchbar } from "react-native-paper";
 
 const isAndroid = Platform.OS === "android";
 
