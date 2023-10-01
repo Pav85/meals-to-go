@@ -17,6 +17,7 @@ export const RestaurantInfo = ({ restaurant = {} }) => {
   return (
     <Card elevation={5} style={styles.card}>
       <Card.Cover key={name} style={styles.cover}></Card.Cover>
+      <Text>{name}</Text>
     </Card>
   );
 };
