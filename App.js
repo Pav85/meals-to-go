@@ -1,3 +1,4 @@
+import React from "react";
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import {
   SafeAreaView,
@@ -7,7 +8,7 @@ import {
   Platform,
   StatusBar,
 } from "react-native";
-import React from "react";
+import { Searchbar } from "react-native-paper";
 
 const isAndroid = Platform.OS === "android";
 
