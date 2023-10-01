@@ -9,7 +9,7 @@ export default function App() {
         <Text>Search</Text>
       </View>
       <View style={{ flex: 1, padding: 16, backgroundColor: "blue" }}>
-        <Text>Lissssst</Text>
+        <Text>List</Text>
       </View>
     </SafeAreaView>
   );
