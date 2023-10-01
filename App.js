@@ -9,10 +9,11 @@ export default function App() {
         <Text>Search</Text>
       </View>
       <View style={{ flex: 1, padding: 16, backgroundColor: "blue" }}>
-        <Text>List</Text>
+        <Text>Lissssst</Text>
       </View>
     </SafeAreaView>
   );
 }
+// might have to wrap everything in <></> tag because of the <StatusBar style="auto" /> element
 
 const styles = StyleSheet.create({});
