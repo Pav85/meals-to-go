@@ -3,7 +3,7 @@ import { Text } from "react-native";
 
 export const RestaurantInfo = ({ restaurant }) => {
   const {
-    name,
+    name = "some restaurant",
     icon,
     photos,
     address,
