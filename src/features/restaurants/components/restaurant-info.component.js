@@ -14,7 +14,14 @@ export const RestaurantInfo = ({ restaurant = {} }) => {
     rating = 4,
     isClosedTemporarily,
   } = restaurant;
-  return <Text>{name}</Text>;
+  return (
+    <Card elevation={5} style={styles.card}>
+      <Card.Cover key={name} style={styles.cover}></Card.Cover>
+    </Card>
+  );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  card: { backgroundColor: "white" },
+  cover: { padding: 20, backgroundColor: "white" },
+});
