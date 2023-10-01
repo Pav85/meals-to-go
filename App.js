@@ -9,7 +9,9 @@ export default function App() {
         <View style={{ padding: 16, backgroundColor: "green" }}>
           <Text>Search</Text>
         </View>
-        <View style={{ flex: 1, padding: 16, backgroundColor: "blue" }}></View>
+        <View style={{ flex: 1, padding: 16, backgroundColor: "blue" }}>
+          <Text>List</Text>
+        </View>
       </SafeAreaView>
     </View>
   );
