@@ -6,6 +6,7 @@ import styled from "styled-components/native";
 const Title = styled.Text`
   padding: 16px;
   color: red;
+  text-align: center;
 `;
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
