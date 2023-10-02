@@ -26,7 +26,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
         style={styles.cover}
         source={{ uri: photos[0] }}
       ></Card.Cover>
-      <Text style={styles.title}>{name}</Text>
+      <Title>{name}</Title>
     </Card>
   );
 };
