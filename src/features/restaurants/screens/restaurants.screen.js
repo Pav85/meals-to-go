@@ -22,27 +22,21 @@ const SearchContainer = styled.View`
   padding: 16px;
 `;
 
+const RestaurantListContainer = styled.View`
+  flex: 1;
+  padding: 16px;
+  background-color: antiquewhite;
+`;
+
 export const RestaurantScreen = () => {
   return (
     <SafeArea>
       <SearchContainer>
         <Searchbar />
       </SearchContainer>
-      <View style={styles.list}>
+      <RestaurantListContainer>
         <RestaurantInfoCard />
-      </View>
+      </RestaurantListContainer>
     </SafeArea>
   );
 };
-
-const styles = StyleSheet.create({
-  search: {
-    padding: 16,
-    // backgroundColor: "green",
-  },
-  list: {
-    flex: 1,
-    padding: 16,
-    backgroundColor: "blue",
-  },
-});
