@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { Searchbar } from "react-native-paper";
 import { RestaurantInfoCard } from "../components/restaurant-info.component";
+import styled from "styled-components/native";
 
 const isAndroid = Platform.OS === "android";
 
