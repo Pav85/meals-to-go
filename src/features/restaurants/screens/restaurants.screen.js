@@ -18,12 +18,16 @@ const SafeArea = styled(SafeAreaView)`
   padding-top: ${isAndroid ? StatusBar.currentHeight : 0}px;
 `;
 
+const SearchContainer = styled.View`
+  padding: 16px;
+`;
+
 export const RestaurantScreen = () => {
   return (
     <SafeArea>
-      <View style={styles.search}>
+      <SearchContainer>
         <Searchbar />
-      </View>
+      </SearchContainer>
       <View style={styles.list}>
         <RestaurantInfoCard />
       </View>
