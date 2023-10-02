@@ -32,7 +32,7 @@ export const RestaurantScreen = () => {
   return (
     <SafeArea>
       <SearchContainer>
-        <Searchbar />
+        <Searchbar placeholder="Search" iconColor="red" />
       </SearchContainer>
       <RestaurantListContainer>
         <RestaurantInfoCard />
