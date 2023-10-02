@@ -32,10 +32,6 @@ export const RestaurantScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: isAndroid ? StatusBar.currentHeight : 0,
-  },
   search: {
     padding: 16,
     // backgroundColor: "green",
