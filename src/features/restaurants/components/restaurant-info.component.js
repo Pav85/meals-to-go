@@ -15,7 +15,7 @@ const RestaurantCardCover = styled(Card.Cover)`
 const Title = styled(Text)`
   padding: 16px;
   color: red;
-  text-align: center;
+  text-align: center; /* might remove later */
 `;
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
