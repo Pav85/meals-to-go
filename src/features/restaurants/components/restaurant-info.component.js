@@ -40,5 +40,3 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     </RestaurantCard>
   );
 };
-
-const styles = StyleSheet.create({});
