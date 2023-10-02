@@ -12,7 +12,7 @@ const RestaurantCardCover = styled(Card.Cover)`
   background-color: white;
 `;
 
-const Title = styled.Text`
+const Title = styled(Text)`
   padding: 16px;
   color: red;
   text-align: center;
