@@ -13,16 +13,21 @@ import styled from "styled-components/native";
 
 const isAndroid = Platform.OS === "android";
 
+const SafeArea = styled(SafeAreaView)`
+  flex: 1;
+  padding-top: ${isAndroid ? StatusBar.currentHeight : 0}px;
+`;
+
 export const RestaurantScreen = () => {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeArea>
       <View style={styles.search}>
         <Searchbar />
       </View>
       <View style={styles.list}>
         <RestaurantInfoCard />
       </View>
-    </SafeAreaView>
+    </SafeArea>
   );
 };
 
