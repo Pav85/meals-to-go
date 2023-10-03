@@ -17,9 +17,9 @@ const Info = styled.View`
 `;
 
 const Title = styled(Text)`
-  color: ${(props) => props.theme.colors.ui.primary};
   font-family: ${(props) => props.theme.fonts.heading};
   font-size: ${(props) => props.theme.fontSizes.body};
+  color: ${(props) => props.theme.colors.ui.primary};
 `;
 
 const Address = styled(Text)`
