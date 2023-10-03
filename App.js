@@ -4,8 +4,11 @@ import { StyleSheet, View } from "react-native";
 import { RestaurantScreen } from "./src/features/restaurants/screens/restaurants.screen";
 import { ThemeProvider } from "styled-components/native";
 import { theme } from "./src/infrastructure/theme";
-import { useFonts, Oswald_400Regular } from "@expo-google-fonts/oswald";
-import { useFonts, Lato_400Regular } from "@expo-google-fonts/lato";
+import {
+  useFonts as useOswald,
+  Oswald_400Regular,
+} from "@expo-google-fonts/oswald";
+import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
 
 export default function App() {
   const [oswaldLoaded] = useFonts({
