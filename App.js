@@ -7,7 +7,7 @@ import { theme } from "./src/infrastructure/theme";
 import { useFonts, Oswald_400Regular } from "@expo-google-fonts/oswald";
 
 export default function App() {
-  let [oswaldLoaded] = useFonts({
+  const [oswaldLoaded] = useFonts({
     Oswald_400Regular,
   });
 
