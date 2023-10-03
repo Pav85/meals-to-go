@@ -23,7 +23,7 @@ const Title = styled(Text)`
 `;
 
 const Address = styled(Text)`
-  font-size: ${(props) => props.theme.fontSizes.body};
+  font-family: ${(props) => props.theme.fonts.body};
 `;
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
