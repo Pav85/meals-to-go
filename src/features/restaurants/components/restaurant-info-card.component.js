@@ -18,9 +18,11 @@ const Info = styled.View`
 
 const Title = styled(Text)`
   color: ${(props) => props.theme.colors.ui.primary};
-  /* text-align: center; */
-  /* might remove later */
   font-family: ${(props) => props.theme.fonts.body};
+  font-size: ${(props) => props.theme.fontSizes.body};
+`;
+
+const Address = styled(Text)`
   font-size: ${(props) => props.theme.fontSizes.body};
 `;
 
@@ -44,6 +46,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
       ></RestaurantCardCover>
       <Info>
         <Title>{name}</Title>
+        <Address>{address}</Address>
       </Info>
     </RestaurantCard>
   );
