@@ -12,6 +12,10 @@ export default function App() {
     Oswald_400Regular,
   });
 
+  const [latoLoaded] = useFonts({
+    Lato_400Regular,
+  });
+
   return (
     <View style={styles.topContainer}>
       <ThemeProvider theme={theme}>
