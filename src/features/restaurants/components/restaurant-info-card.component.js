@@ -16,6 +16,7 @@ const Title = styled(Text)`
   padding: ${(props) => props.theme.space[3]};
   color: ${(props) => props.theme.colors.ui.primary};
   text-align: center; /* might remove later */
+  font-family: ${(props) => props.theme.fonts.body};
 `;
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
