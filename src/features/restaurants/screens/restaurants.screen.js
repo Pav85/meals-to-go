@@ -24,8 +24,7 @@ const SearchContainer = styled.View`
 
 const RestaurantListContainer = styled.View`
   flex: 1;
-  padding: 16px;
-  background-color: antiquewhite;
+  padding: ${(props) => props.theme.space[3]};
 `;
 
 export const RestaurantScreen = () => {
