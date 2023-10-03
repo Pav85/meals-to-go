@@ -31,7 +31,10 @@ export const RestaurantScreen = () => {
   return (
     <SafeArea>
       <SearchContainer>
-        <Searchbar placeholder="Search" iconColor="red" />
+        <Searchbar
+          placeholder="Search"
+          iconColor={(props) => props.theme.colors.text.error}
+        />
       </SearchContainer>
       <RestaurantListContainer>
         <RestaurantInfoCard />
