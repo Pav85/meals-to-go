@@ -3,6 +3,7 @@ import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
 import { RestaurantScreen } from "./src/features/restaurants/screens/restaurants.screen";
 import { ThemeProvider } from "styled-components/native";
+import { theme } from "./src/infrastructure/theme";
 
 export default function App() {
   return (
