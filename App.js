@@ -11,11 +11,11 @@ import {
 import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
 
 export default function App() {
-  const [oswaldLoaded] = useFonts({
+  const [oswaldLoaded] = useOswald({
     Oswald_400Regular,
   });
 
-  const [latoLoaded] = useFonts({
+  const [latoLoaded] = useLato({
     Lato_400Regular,
   });
 
