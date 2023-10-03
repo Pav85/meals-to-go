@@ -16,6 +16,9 @@ export default function App() {
     Lato_400Regular,
   });
 
+  if (!oswaldLoaded || !latoLoaded) {
+    return null;
+  }
   return (
     <View style={styles.topContainer}>
       <ThemeProvider theme={theme}>
