@@ -46,6 +46,10 @@ const SectionEnd = styled.View`
   justify-content: flex-end;
 `;
 
+const Open = styled(SvgXml)`
+  flex-direction: row;
+`;
+
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
     name = "Some Restaurant",
