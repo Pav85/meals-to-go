@@ -4,6 +4,7 @@ import { Card } from "react-native-paper";
 import styled from "styled-components/native";
 import { SvgXml } from "react-native-svg";
 import star from "../../../../assets/star";
+import open from "../../../../assets/open";
 
 const RestaurantCard = styled(Card)`
   background-color: ${(props) => props.theme.colors.bg.primary};
@@ -46,10 +47,6 @@ const SectionEnd = styled.View`
   justify-content: flex-end;
 `;
 
-const Open = styled(SvgXml)`
-  flex-direction: row;
-`;
-
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
     name = "Some Restaurant",
@@ -80,6 +77,9 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
               <SvgXml xml={star} width={20} height={20} />
             ))}
           </Rating>
+          <SectionEnd>
+            {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
+          </SectionEnd>
         </Section>
 
         <Address>{address}</Address>
