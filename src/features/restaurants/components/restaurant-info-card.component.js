@@ -43,6 +43,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
   } = restaurant;
 
   const ratingArray = Array.from(new Array(rating));
+  console.log(rating);
 
   return (
     <RestaurantCard elevation={5}>
