@@ -49,7 +49,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
       ></RestaurantCardCover>
       <Info>
         <Title>{name}</Title>
-        <SvgXml xml={star} />
+        <SvgXml xml={star} width={20} height={20} />
         <Address>{address}</Address>
       </Info>
     </RestaurantCard>
