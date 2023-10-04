@@ -35,6 +35,11 @@ const Rating = styled.View`
   padding-bottom: ${(props) => props.theme.space[2]};
 `;
 
+const Section = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
+
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
     name = "Some Restaurant",
@@ -59,11 +64,13 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
       ></RestaurantCardCover>
       <Info>
         <Title>{name}</Title>
-        <Rating>
-          {ratingArray.map(() => (
-            <SvgXml xml={star} width={20} height={20} />
-          ))}
-        </Rating>
+        <Section>
+          <Rating>
+            {ratingArray.map(() => (
+              <SvgXml xml={star} width={20} height={20} />
+            ))}
+          </Rating>
+        </Section>
 
         <Address>{address}</Address>
       </Info>
