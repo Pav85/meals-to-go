@@ -83,10 +83,10 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
                 CLOSED TEMPORARILY
               </Text>
             )}
+            <View style={{ paddingLeft: 16 }} />
             {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
-            <View style={{ paddingLeft: 16 }}>
-              <Image style={{ width: 15, height: 15 }} source={{ uri: icon }} />
-            </View>
+            <View style={{ paddingLeft: 16 }} />
+            <Image style={{ width: 15, height: 15 }} source={{ uri: icon }} />
           </SectionEnd>
         </Section>
 
