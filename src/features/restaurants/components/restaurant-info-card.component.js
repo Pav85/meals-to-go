@@ -57,7 +57,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     address = "100 random street",
     isOpenNow = true,
     rating = 4,
-    isClosedTemporarily,
+    isClosedTemporarily = true,
   } = restaurant;
 
   const ratingArray = Array.from(new Array(Math.floor(rating)));
@@ -78,6 +78,11 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
             ))}
           </Rating>
           <SectionEnd>
+            {isClosedTemporarily && (
+              <Text variant="label" style={{ color: "red" }}>
+                CLOSED TEMPORARILY
+              </Text>
+            )}
             {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
           </SectionEnd>
         </Section>
