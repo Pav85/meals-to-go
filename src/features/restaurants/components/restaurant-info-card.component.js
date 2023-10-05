@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import { Text, StyleSheet, Image } from "react-native";
 import { Card } from "react-native-paper";
 import styled from "styled-components/native";
 import { SvgXml } from "react-native-svg";
@@ -84,6 +84,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
               </Text>
             )}
             {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
+            <Image style={{ width: 15, height: 15 }} source={{ uri: icon }} />
           </SectionEnd>
         </Section>
 
