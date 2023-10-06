@@ -25,21 +25,6 @@ const LeftLarge = styled.View`
   margin-left: ${(props) => props.theme.space[3]};
 `;
 
-export const Spacer = ({ variant }) => {
-  if (variant === "top.medium") {
-    return <TopMedium />;
-  }
-  if (variant === "top.large") {
-    return <TopLarge />;
-  }
-  if (variant === "left.small") {
-    return <LeftSmall />;
-  }
-  if (variant === "left.medium") {
-    return <LeftMedium />;
-  }
-  if (variant === "left.large") {
-    return <LeftLarge />;
-  }
-  return <TopSmall />;
+export const Spacer = ({ position, size }) => {
+  return <SpacerComponent position={position} size={size} />;
 };
