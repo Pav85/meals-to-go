@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components/native";
 
 const sizeVariant = {
@@ -14,15 +13,16 @@ const positionVariant = {
   bottom: "marginBottom",
 };
 
-const getVariant = (position, size) => {
+const getVariant = (position, size, theme) => {
   const sizeIndex = sizeVariant[size];
   const property = positionVariant[position];
+  const value = theme.space[sizeIndex];
 
-  return `${positionVariant[position]}:${sizeVariant[size]}`;
+  return `${property}:${value}`;
 };
 
 export const Spacer = styled.View`
-  ${({ position, size }) => getVariant(position, size)}
+  ${({ position, size, theme }) => getVariant(position, size, theme)}
 `;
 
 Spacer.defaultProps = {
