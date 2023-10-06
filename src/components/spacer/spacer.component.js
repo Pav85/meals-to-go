@@ -14,8 +14,12 @@ const positionVariant = {
   bottom: "marginBottom",
 };
 
-const getVariant = (position, size) =>
-  `${positionVariant[position]}:${sizeVariant[size]}`;
+const getVariant = (position, size) => {
+  const sizeIndex = sizeVariant[size];
+  const property = positionVariant[position];
+
+  return `${positionVariant[position]}:${sizeVariant[size]}`;
+};
 
 export const Spacer = styled.View`
   ${({ position, size }) => getVariant(position, size)}
