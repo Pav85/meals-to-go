@@ -7,15 +7,17 @@ const sizes = {
   large: 3,
 };
 
-const positions = {
+const positionVariant = {
   top: "marginTop",
   left: "marginLeft",
   right: "marginRight",
   bottom: "marginBottom",
 };
 
+const getVariant = (position, sizes) => {};
+
 export const Spacer = styled.View`
-  ${({ position, size }) => {}}
+  ${({ position, size }) => getVariant(position, size)}
 `;
 
 Spacer.defaultProps = {
