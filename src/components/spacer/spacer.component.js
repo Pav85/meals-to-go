@@ -7,6 +7,13 @@ const sizes = {
   large: 3,
 };
 
+const positions = {
+  top: "marginTop",
+  left: "marginLeft",
+  right: "marginRight",
+  bottom: "marginBottom",
+};
+
 export const Spacer = styled.View`
   ${({ position, size }) => {}}
 `;
