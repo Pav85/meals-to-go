@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components/native";
 
-const sizes = {
+const sizeVariant = {
   small: 1,
   medium: 2,
   large: 3,
