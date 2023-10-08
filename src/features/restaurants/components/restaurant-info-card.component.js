@@ -44,6 +44,11 @@ const SectionEnd = styled.View`
   justify-content: flex-end;
 `;
 
+const Icon = styled.Image`
+  width: 15px;
+  height: 15px;
+`;
+
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
     name = "Some Restaurant",
@@ -76,7 +81,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
           </Rating>
           <SectionEnd>
             {isClosedTemporarily && (
-              <Text variant="caption" >
+              <Text variant="error" >
                 CLOSED TEMPORARILY
               </Text>
             )}
@@ -84,7 +89,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
               {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
             </Spacer>
             <Spacer position="left" size="large">
-              <Image style={{ width: 15, height: 15 }} source={{ uri: icon }} />
+              <Icon source={{ uri: icon }} />
             </Spacer>
           </SectionEnd>
         </Section>
