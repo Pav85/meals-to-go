@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, StyleSheet, Image, View } from "react-native";
+import { StyleSheet, Image, View } from "react-native";
 import { Card } from "react-native-paper";
 import styled from "styled-components/native";
 import { SvgXml } from "react-native-svg";
@@ -21,11 +21,6 @@ const Info = styled.View`
   padding: ${(props) => props.theme.space[3]};
 `;
 
-const Title = styled(Text)`
-  font-family: ${(props) => props.theme.fonts.heading};
-  font-size: ${(props) => props.theme.fontSizes.body};
-  color: ${(props) => props.theme.colors.ui.primary};
-`;
 
 const Address = styled(Text)`
   font-family: ${(props) => props.theme.fonts.body};
@@ -72,7 +67,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
         source={{ uri: photos[0] }}
       ></RestaurantCardCover>
       <Info>
-        <Title>{name}</Title>
+        <Text variant='label'>{name}</Text>
         <Section>
           <Rating>
             {ratingArray.map(() => (
@@ -81,7 +76,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
           </Rating>
           <SectionEnd>
             {isClosedTemporarily && (
-              <Text variant="label" style={{ color: "red" }}>
+              <Text variant="caption" >
                 CLOSED TEMPORARILY
               </Text>
             )}
