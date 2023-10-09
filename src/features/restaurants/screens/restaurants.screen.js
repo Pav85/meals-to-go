@@ -52,7 +52,7 @@ export const RestaurantScreen = () => {
           </RestaurantListContainer>
         )}
         keyExtractor={(item) => item.name}
-        contentContainerStyle={{ padding: 16, marginTop: 16 }}
+        contentContainerStyle={{ padding: 16 }}
       />
     </SafeArea>
   );
