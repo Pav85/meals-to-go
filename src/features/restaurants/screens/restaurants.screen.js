@@ -38,7 +38,7 @@ export const RestaurantScreen = () => {
         />
       </SearchContainer>
       <FlatList
-        data={[]}
+        data={[{ name: 1 }, { name: 2 }]}
         renderItem={() => (
           <RestaurantListContainer>
             <RestaurantInfoCard />
