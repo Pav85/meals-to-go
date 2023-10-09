@@ -6,6 +6,7 @@ import {
   View,
   Platform,
   StatusBar,
+  FlatList,
 } from "react-native";
 import { Searchbar } from "react-native-paper";
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
@@ -36,9 +37,16 @@ export const RestaurantScreen = () => {
           iconColor={(props) => props.theme.colors.text.error}
         />
       </SearchContainer>
-      <RestaurantListContainer>
-        <RestaurantInfoCard />
-      </RestaurantListContainer>
+      <FlatList
+        data={[]}
+        renderItem={() => (
+          <RestaurantListContainer>
+            <RestaurantInfoCard />
+          </RestaurantListContainer>
+        )}
+        keyExtractor={(item) => item.name}
+        contentContainerStyle={{ padding: 16 }}
+      />
     </SafeArea>
   );
 };
