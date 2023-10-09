@@ -38,14 +38,21 @@ export const RestaurantScreen = () => {
         />
       </SearchContainer>
       <FlatList
-        data={[{ name: 1 }, { name: 2 }]}
+        data={[
+          { name: 1 },
+          { name: 2 },
+          { name: 3 },
+          { name: 4 },
+          { name: 5 },
+          { name: 6 },
+        ]}
         renderItem={() => (
           <RestaurantListContainer>
             <RestaurantInfoCard />
           </RestaurantListContainer>
         )}
         keyExtractor={(item) => item.name}
-        contentContainerStyle={{ padding: 16 }}
+        contentContainerStyle={{ padding: 16, marginTop: 16 }}
       />
     </SafeArea>
   );
