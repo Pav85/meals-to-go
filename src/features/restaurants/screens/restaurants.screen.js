@@ -28,6 +28,12 @@ const RestaurantListContainer = styled.View`
   padding: ${(props) => props.theme.space[2]};
 `;
 
+const RestaurantList = styled(FlatList).attrs({
+  contentContainerStyle: {
+    padding: 8,
+  },
+})``;
+
 export const RestaurantScreen = () => {
   return (
     <SafeArea>
@@ -37,7 +43,7 @@ export const RestaurantScreen = () => {
           iconColor={(props) => props.theme.colors.text.error}
         />
       </SearchContainer>
-      <FlatList
+      <RestaurantList
         data={[
           { name: 1 },
           { name: 2 },
@@ -52,7 +58,6 @@ export const RestaurantScreen = () => {
           </RestaurantListContainer>
         )}
         keyExtractor={(item) => item.name}
-        contentContainerStyle={{ padding: 16 }}
       />
     </SafeArea>
   );
