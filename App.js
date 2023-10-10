@@ -1,6 +1,6 @@
 import React from "react";
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { RestaurantScreen } from "./src/features/restaurants/screens/restaurants.screen";
 import { ThemeProvider } from "styled-components/native";
 import { theme } from "./src/infrastructure/theme";
@@ -42,9 +42,18 @@ export default function App() {
             <Tab.Screen
               name="Restaurants"
               component={RestaurantScreen}
+              options={{ unmountOnBlur: true, headerShown: false }}
             ></Tab.Screen>
-            <Tab.Screen name="Map" component={Map}></Tab.Screen>
-            <Tab.Screen name="Settings" component={Settings}></Tab.Screen>
+            <Tab.Screen
+              name="Map"
+              component={Map}
+              options={{ unmountOnBlur: true, headerShown: false }}
+            ></Tab.Screen>
+            <Tab.Screen
+              name="Settings"
+              component={Settings}
+              options={{ unmountOnBlur: true, headerShown: false }}
+            ></Tab.Screen>
           </Tab.Navigator>
         </NavigationContainer>
       </ThemeProvider>
