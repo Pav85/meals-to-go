@@ -15,17 +15,16 @@ import { SafeArea } from "./src/components/utility/safe-area.component";
 
 const Tab = createBottomTabNavigator();
 
-const Settings = () => {
+const Settings = () => (
   <SafeArea>
     <Text>Settings</Text>
-  </SafeArea>;
-};
-
-const Map = () => {
+  </SafeArea>
+);
+const Map = () => (
   <SafeArea>
     <Text>Map</Text>
-  </SafeArea>;
-};
+  </SafeArea>
+);
 
 export default function App() {
   const [oswaldLoaded] = useOswald({
