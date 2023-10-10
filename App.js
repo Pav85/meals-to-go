@@ -11,15 +11,20 @@ import {
 import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { SafeArea } from "./src/components/utility/safe-area.component";
 
 const Tab = createBottomTabNavigator();
 
 const Settings = () => {
-  <Text>Settings</Text>;
+  <SafeArea>
+    <Text>Settings</Text>
+  </SafeArea>;
 };
 
 const Map = () => {
-  <Text>Map</Text>;
+  <SafeArea>
+    <Text>Map</Text>
+  </SafeArea>;
 };
 
 export default function App() {
