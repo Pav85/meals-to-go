@@ -11,6 +11,8 @@ export const RestaurantsContextProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  useEffect(() => {});
+
   return (
     <RestaurantsContext.Provider
       value={{ restaurants: [1, 2, 3, 4, 5, 6, 7, 8] }}
