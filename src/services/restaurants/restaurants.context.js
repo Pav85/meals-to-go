@@ -13,7 +13,9 @@ export const RestaurantsContextProvider = ({ children }) => {
 
   const retrieveRestaurants = () => {
     setIsLoading(true);
-    setTimeout(() => {}, 2000);
+    setTimeout(() => {
+      restaurantsRequest();
+    }, 2000);
   };
 
   useEffect(() => {
