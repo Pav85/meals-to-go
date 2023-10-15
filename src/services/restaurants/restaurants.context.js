@@ -18,6 +18,9 @@ export const RestaurantsContextProvider = ({ children }) => {
         .then(restaurantsTransform)
         .then((restaurants) => {
           setRestaurants(restaurants);
+        })
+        .catch((err) => {
+          setError(err);
         });
     }, 2000);
   };
