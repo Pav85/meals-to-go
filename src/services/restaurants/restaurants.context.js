@@ -31,6 +31,8 @@ export const RestaurantsContextProvider = ({ children }) => {
     retrieveRestaurants();
   }, []);
 
+  console.log(restaurants);
+
   return (
     <RestaurantsContext.Provider value={{ restaurants, isLoading, error }}>
       {children}
