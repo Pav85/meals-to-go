@@ -11,7 +11,14 @@ export const RestaurantsContextProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  useEffect(() => {});
+  const retrieveRestaurants = () => {
+    setIsLoading(true);
+    setTimeout(() => {}, 2000);
+  };
+
+  useEffect(() => {
+    retrieveRestaurants();
+  }, []);
 
   return (
     <RestaurantsContext.Provider
