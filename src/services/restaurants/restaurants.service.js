@@ -11,8 +11,8 @@ export const restaurantsRequest = (location = "37.7749295,-122.4194155") => {
   });
 };
 
-const restaurantsTransform = (result) => {
-  const newResult = camelize(result);
+const restaurantsTransform = ({ results = [] }) => {
+  const newResult = camelize(results.length);
   return newResult;
 };
 restaurantsRequest()
