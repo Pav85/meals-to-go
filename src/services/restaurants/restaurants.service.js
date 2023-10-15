@@ -12,13 +12,18 @@ export const restaurantsRequest = (location = "37.7749295,-122.4194155") => {
 };
 
 const restaurantsTransform = ({ results = [] }) => {
-  const newResult = camelize(results.length);
-  return newResult;
+  const mappedResults = results.map((restaurant) => {
+    return 1;
+  });
+  console.log(mappedResults);
+
+  return results;
 };
+
 restaurantsRequest()
   .then(restaurantsTransform)
   .then((transformedResponse) => {
-    console.log(transformedResponse);
+    // console.log(transformedResponse);
   })
   .catch((err) => {
     console.log("error");
