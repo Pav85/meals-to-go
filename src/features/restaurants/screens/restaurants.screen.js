@@ -31,7 +31,7 @@ const RestaurantList = styled(FlatList).attrs({
 
 export const RestaurantScreen = () => {
   const restaurantContext = useContext(RestaurantsContext);
-  console.log(restaurantContext);
+  // console.log(restaurantContext);
   return (
     <SafeArea>
       <SearchContainer>
@@ -41,14 +41,7 @@ export const RestaurantScreen = () => {
         />
       </SearchContainer>
       <RestaurantList
-        data={[
-          { name: 1 },
-          { name: 2 },
-          { name: 3 },
-          { name: 4 },
-          { name: 5 },
-          { name: 6 },
-        ]}
+        data={restaurantContext.restaurants}
         renderItem={() => (
           <RestaurantListContainer>
             <RestaurantInfoCard />
