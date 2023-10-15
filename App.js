@@ -13,7 +13,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { SafeArea } from "./src/components/utility/safe-area.component";
 import { Ionicons } from "@expo/vector-icons";
-// import { restaurantsRequest } from "./src/services/restaurants/restaurants.service";
+import { RestaurantsContextProvider } from "./src/services/restaurants/restaurants.context";
 
 const Tab = createBottomTabNavigator();
 
@@ -61,31 +61,33 @@ export default function App() {
   return (
     <View style={styles.topContainer}>
       <ThemeProvider theme={theme}>
-        <NavigationContainer>
-          <Tab.Navigator
-            screenOptions={createScreenOptions}
-            tabBarOptions={{
-              activeTintColor: "tomato",
-              inactiveTintColor: "gray",
-            }}
-          >
-            <Tab.Screen
-              name="Restaurants"
-              component={RestaurantScreen}
-              options={{ unmountOnBlur: true, headerShown: false }}
-            ></Tab.Screen>
-            <Tab.Screen
-              name="Map"
-              component={Map}
-              options={{ unmountOnBlur: true, headerShown: false }}
-            ></Tab.Screen>
-            <Tab.Screen
-              name="Settings"
-              component={Settings}
-              options={{ unmountOnBlur: true, headerShown: false }}
-            ></Tab.Screen>
-          </Tab.Navigator>
-        </NavigationContainer>
+        <RestaurantsContextProvider>
+          <NavigationContainer>
+            <Tab.Navigator
+              screenOptions={createScreenOptions}
+              tabBarOptions={{
+                activeTintColor: "tomato",
+                inactiveTintColor: "gray",
+              }}
+            >
+              <Tab.Screen
+                name="Restaurants"
+                component={RestaurantScreen}
+                options={{ unmountOnBlur: true, headerShown: false }}
+              ></Tab.Screen>
+              <Tab.Screen
+                name="Map"
+                component={Map}
+                options={{ unmountOnBlur: true, headerShown: false }}
+              ></Tab.Screen>
+              <Tab.Screen
+                name="Settings"
+                component={Settings}
+                options={{ unmountOnBlur: true, headerShown: false }}
+              ></Tab.Screen>
+            </Tab.Navigator>
+          </NavigationContainer>
+        </RestaurantsContextProvider>
       </ThemeProvider>
 
       <ExpoStatusBar style="auto" />
