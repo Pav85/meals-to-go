@@ -18,7 +18,7 @@ export const RestaurantsContextProvider = ({ children }) => {
         .then(restaurantsTransform)
         .then((results) => {
           setIsLoading(false);
-          setRestaurants(restaurants);
+          setRestaurants(results);
         })
         .catch((err) => {
           setIsLoading(false);
