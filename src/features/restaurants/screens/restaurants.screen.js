@@ -42,7 +42,7 @@ export const RestaurantScreen = () => {
           <Loading
             size={50}
             animating={true}
-            // color={Colors.black}
+            // color={Colors.red}
           />
         </LoadingContainer>
       )}
