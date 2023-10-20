@@ -34,20 +34,25 @@ const Loading = styled(ActivityIndicator)`
   margin-left: -25px;
 `;
 
+const LoadingContainer = styled.View`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+`;
+
 export const RestaurantScreen = () => {
   const { isLoading, error, restaurants } = useContext(RestaurantsContext);
 
   return (
     <SafeArea>
       {isLoading && (
-        <View style={{ position: "absolute", top: "50%", left: "50%" }}>
+        <LoadingContainer>
           <Loading
             size={50}
-            style={{ marginLeft: -25 }}
             animating={true}
             // color={Colors.black}
           />
-        </View>
+        </LoadingContainer>
       )}
       <SearchContainer>
         <Searchbar
