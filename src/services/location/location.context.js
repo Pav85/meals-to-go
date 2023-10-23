@@ -10,10 +10,11 @@ export const LocationContextProvider = ({ children }) => {
   const [location, setLocation] = useState(null);
   const [keyword, setKeyword] = useState("san francisco");
 
-  const onSearch = (searchKeyword) => {
+  const onSearch = (searchKeyword = "Antwerp") => {
+    console.log(searchKeyword.toLocaleLowerCase());
     setIsLoading(true);
     setKeyword(searchKeyword.toLowerCase());
-    locationRequest(searchKeyword)
+    locationRequest(searchKeyword.toLocaleLowerCase())
       .then(locationTransform)
       .then((result) => {
         setIsLoading(false);
@@ -26,7 +27,7 @@ export const LocationContextProvider = ({ children }) => {
       });
   };
   useEffect(() => {
-    onSearch(keyword);
+    onSearch();
   }, []);
 
   return (
