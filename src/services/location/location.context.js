@@ -9,6 +9,9 @@ export const LocationContextProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const [location, setLocation] = useState(null);
   const [keyword, setKeyword] = useState("san francisco");
+
+  useEffect(() => {}, []);
+
   return (
     <LocationContext.Provider
       value={{ isLoading, error, location, search: () => null, keyword }}
