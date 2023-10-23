@@ -62,33 +62,35 @@ export default function App() {
   return (
     <View style={styles.topContainer}>
       <ThemeProvider theme={theme}>
-        <RestaurantsContextProvider>
-          <NavigationContainer>
-            <Tab.Navigator
-              screenOptions={createScreenOptions}
-              tabBarOptions={{
-                activeTintColor: "tomato",
-                inactiveTintColor: "gray",
-              }}
-            >
-              <Tab.Screen
-                name="Restaurants"
-                component={RestaurantScreen}
-                options={{ unmountOnBlur: true, headerShown: false }}
-              ></Tab.Screen>
-              <Tab.Screen
-                name="Map"
-                component={Map}
-                options={{ unmountOnBlur: true, headerShown: false }}
-              ></Tab.Screen>
-              <Tab.Screen
-                name="Settings"
-                component={Settings}
-                options={{ unmountOnBlur: true, headerShown: false }}
-              ></Tab.Screen>
-            </Tab.Navigator>
-          </NavigationContainer>
-        </RestaurantsContextProvider>
+        <LocationContextProvider>
+          <RestaurantsContextProvider>
+            <NavigationContainer>
+              <Tab.Navigator
+                screenOptions={createScreenOptions}
+                tabBarOptions={{
+                  activeTintColor: "tomato",
+                  inactiveTintColor: "gray",
+                }}
+              >
+                <Tab.Screen
+                  name="Restaurants"
+                  component={RestaurantScreen}
+                  options={{ unmountOnBlur: true, headerShown: false }}
+                ></Tab.Screen>
+                <Tab.Screen
+                  name="Map"
+                  component={Map}
+                  options={{ unmountOnBlur: true, headerShown: false }}
+                ></Tab.Screen>
+                <Tab.Screen
+                  name="Settings"
+                  component={Settings}
+                  options={{ unmountOnBlur: true, headerShown: false }}
+                ></Tab.Screen>
+              </Tab.Navigator>
+            </NavigationContainer>
+          </RestaurantsContextProvider>
+        </LocationContextProvider>
       </ThemeProvider>
 
       <ExpoStatusBar style="auto" />
