@@ -27,7 +27,7 @@ export const LocationContextProvider = ({ children }) => {
 
   return (
     <LocationContext.Provider
-      value={{ isLoading, error, location, search: () => null, keyword }}
+      value={{ isLoading, error, location, search: onSearch, keyword }}
     >
       {children}
     </LocationContext.Provider>
