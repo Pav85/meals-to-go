@@ -8,11 +8,14 @@ export const LocationContextProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [location, setLocation] = useState(null);
-  const [keyword, setKeyword] = useState("san francisco");
+  const [keyword, setKeyword] = useState("San Francisco");
 
-  const onSearch = (searchKeyword = "Antwerp") => {
+  const onSearch = (searchKeyword) => {
     setIsLoading(true);
     setKeyword(searchKeyword.toLowerCase());
+
+    console.log(searchKeyword);
+
     locationRequest(searchKeyword.toLocaleLowerCase())
       .then(locationTransform)
       .then((result) => {

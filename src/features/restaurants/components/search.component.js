@@ -8,7 +8,7 @@ const SearchContainer = styled.View`
 `;
 
 export const Search = () => {
-  const { keyword } = useContext(LocationContext);
+  const { keyword, search } = useContext(LocationContext);
   const [searchKeyword, setSearchKeyword] = useState(keyword);
 
   return (
@@ -17,6 +17,15 @@ export const Search = () => {
         placeholder="Search for a location"
         // iconColor={(props) => props.theme.colors.text.error}
         value={searchKeyword}
+        onSubmitEditing={() => {
+          search(searchKeyword);
+        }}
+        onChangeText={(text) => {
+          if (!text.length) {
+            return;
+          }
+          setSearchKeyword(text);
+        }}
       />
     </SearchContainer>
   );
