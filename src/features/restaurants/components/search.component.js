@@ -9,6 +9,7 @@ const SearchContainer = styled.View`
 
 export const Search = () => {
   const locationContext = useContext(LocationContext);
+  console.log(locationContext);
   return (
     <SearchContainer>
       <Searchbar
