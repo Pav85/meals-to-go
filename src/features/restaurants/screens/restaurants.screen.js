@@ -46,12 +46,7 @@ export const RestaurantScreen = () => {
           />
         </LoadingContainer>
       )}
-      <SearchContainer>
-        <Searchbar
-          placeholder="Search"
-          iconColor={(props) => props.theme.colors.text.error}
-        />
-      </SearchContainer>
+      <Search />
       <RestaurantList
         data={restaurants}
         renderItem={({ item }) => {
