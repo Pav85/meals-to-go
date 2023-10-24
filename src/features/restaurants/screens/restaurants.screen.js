@@ -6,6 +6,7 @@ import styled from "styled-components/native";
 import { SafeArea } from "../../../components/utility/safe-area.component";
 import { RestaurantsContext } from "../../../services/restaurants/restaurants.context";
 import { ActivityIndicator, Colors } from "react-native-paper";
+import { Search } from "../components/search.component";
 
 const RestaurantListContainer = styled.View`
   flex: 1;
