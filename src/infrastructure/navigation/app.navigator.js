@@ -8,3 +8,9 @@ import { RestaurantScreen } from "../../features/restaurants/screens/restaurants
 import { SafeArea } from "../../components/utility/safe-area.component";
 
 const Tab = createBottomTabNavigator();
+
+const TAB_ICON = {
+  Restaurants: "md-restaurant",
+  Map: "md-map",
+  Settings: "md-settings",
+};
