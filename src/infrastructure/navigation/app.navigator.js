@@ -44,9 +44,21 @@ export const AppNavigator = () => (
         inactiveTintColor: "gray",
       }}
     >
-      <Tab.Screen name="Restaurants" component={RestaurantsScreen} />
-      <Tab.Screen name="Map" component={Map} />
-      <Tab.Screen name="Settings" component={Settings} />
+      <Tab.Screen
+        name="Restaurants"
+        component={RestaurantScreen}
+        options={{ unmountOnBlur: true, headerShown: false }}
+      ></Tab.Screen>
+      <Tab.Screen
+        name="Map"
+        component={Map}
+        options={{ unmountOnBlur: true, headerShown: false }}
+      ></Tab.Screen>
+      <Tab.Screen
+        name="Settings"
+        component={Settings}
+        options={{ unmountOnBlur: true, headerShown: false }}
+      ></Tab.Screen>
     </Tab.Navigator>
   </NavigationContainer>
 );
